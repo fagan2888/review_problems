@@ -31,10 +31,18 @@ class SetOfStacks(object):
 				self.idx -= 1
 			else: 
 				self.idx = None
+		if pos < self.idx:
+			p_stack = pos/self.mx
+			s_pos = pos % self.mx 
+			print 'spos : ' , s_pos
+			v = self.stacks[p_stack].pop(s_pos)
+			for i in range(p_stack,self.curr_stack):
+				self.stacks[i] = self.stacks[i] + [self.stacks[i+1].pop(0)] 
 		return v
 		
 s = SetOfStacks(3)
 print s
+s.push(1)
 s.push(2)
 s.push(3)
 s.push(4)
@@ -51,25 +59,10 @@ print s
 print s.pop()
 print s.pop()
 print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
-print s.pop()
 print s
 s.push(0)
 print s
 s.push(1)
+print s
+print s.pop(2)
 print s
