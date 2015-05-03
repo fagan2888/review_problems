@@ -40,6 +40,12 @@ l3=[5, 18, 22, 30]
 l1 = [1]
 l2 = [5]
 l3 = [2]
+"""
+def to_prev(seqs):
+	mx = 0
+	for seq in seqs:
+"""		
 
-print min_range([l1,l2,l3])
+
+#print min_range([l1,l2,l3])
  
